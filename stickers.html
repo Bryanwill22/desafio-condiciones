@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cuenta de stickers</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <img style="width: 250px" src="./assets/image/sticker-1.jpg" alt="" />
+        <input type="number" id="num1" />
+      </div>
+      <div>
+        <img style="width: 250px" src="./assets/image/sticker-2.jpg" alt="" />
+        <input type="number" id="num2" />
+      </div>
+      <div>
+        <img style="width: 250px" src="./assets/image/sticker-3.jpg" alt="" />
+        <input type="number" id="num3" />
+      </div>
+    </div>
+
+    <button
+      onclick="
+        let num1 = document.querySelector('#num1').value;
+        let num2 = document.querySelector('#num2').value;
+        let num3 = document.querySelector('#num3').value;
+
+        let suma = Number(num1) + Number(num2) + Number(num3);
+        let resultado = document.querySelector('#resultado');
+        resultado.textContent = suma;
+
+        if (suma > 10) {
+          resultado.textContent += ' - Tienes demasiados stickers';
+        } else if (suma < 10) {
+          resultado.textContent += ' - Puedes comprar más stickers';
+        } else {
+          resultado.textContent += ' - Tienes la cantidad perfecta de stickers';
+        }
+      "
+    >
+      Verificar
+    </button>
+
+    <p id="resultado"></p>
+  </body>
+</html>

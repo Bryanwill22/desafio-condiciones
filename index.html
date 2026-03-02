@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio Condiciones JS</title>
+  </head>
+  <body>
+    <img
+      style="width: 250px; border: none"
+      src="./assets/image/imagen-1.jpg"
+      alt="ondas en blanco y negro"
+      id="bordes"
+      onclick="
+        let imagen = document.querySelector('#bordes');
+        if (imagen.style.border == 'none') {
+          imagen.style.border = '2px solid red';
+        } else {
+          imagen.style.border = 'none';
+        }
+      "
+    />
+  </body>
+</html>
